@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -9,36 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCarDal : ICarDal
+    public class EfCarDal : EfEntityRepositoryBase<Car, EfDbContext>, ICarDal
     {
-        public void Add(Car car)
-        {
-            if (car.DailyPrice>0)
-            {
-                using (EfDbContext dbContext = new EfDbContext())
-                {
-                    var addedEntity = dbContext.Entry(car);
-
-                }
-            }
-            
-        }
-
-        public void Delete(Car entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Car Get(Expression<Func<Car, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
         public void GetCarsByBrandId(int brandId)
         {
             throw new NotImplementedException();
@@ -48,10 +21,6 @@ namespace DataAccess.Concrete.EntityFramework
         {
             throw new NotImplementedException();
         }
-
-        public void Update(Car entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
+
