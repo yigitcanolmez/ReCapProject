@@ -14,6 +14,7 @@ namespace Core.Utilities.Result
 
         public ErrorDataResult(T data, bool success, string message) : base(data, false, message)
         {
+
         }
         public ErrorDataResult(string message) : base(default, false, message)
         {
