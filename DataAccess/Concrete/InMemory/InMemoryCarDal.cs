@@ -101,5 +101,15 @@ namespace DataAccess.Concrete.InMemory
             toUpdate.ColorId = car.ColorId;
             toUpdate.Description = car.Description;
         }
+
+        List<Car> ICarDal.GetCarsByBrandId(int brandId)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Car> ICarDal.GetCarsByColorId(int colorId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

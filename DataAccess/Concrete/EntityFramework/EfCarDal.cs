@@ -1,6 +1,8 @@
 ﻿using Core.DataAccess.EntityFramework;
+using Core.Entities;
 using DataAccess.Abstract;
 using Entities;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +14,22 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, EfDbContext>, ICarDal
     {
-        public void GetCarsByBrandId(int brandId)
+        public List<Car> GetCarsByBrandId(int brandId)
         {
-            throw new NotImplementedException();
+            using (EfDbContext cnt = new EfDbContext())
+            {
+                var result  = cnt.Set<Car>().Where(p=>p.BrandId == brandId).ToList();
+                return result;
+            }
         }
 
-        public void GetCarsByColorId(int colorId)
+        public List<Car> GetCarsByColorId(int colorId)
         {
-            throw new NotImplementedException();
+            using (EfDbContext cnt = new EfDbContext())
+            {
+                var result = cnt.Set<Car>().Where(p => p.ColorId == colorId).ToList();
+                return result;
+            }
         }
     }
 }
