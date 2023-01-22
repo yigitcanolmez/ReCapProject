@@ -1,0 +1,48 @@
+
+insert into Brands values ('Alfa Romeo');
+insert into Brands values ('Aston Martin');
+insert into Brands values ('Audi');
+insert into Brands values ('Bentley');
+insert into Brands values ('BMW');
+insert into Brands values ('Bugatti');
+insert into Brands values ('Chevrolet');
+insert into Brands values ('Citroen');
+insert into Brands values ('Dacia');
+insert into Brands values ('Ferrari');
+insert into Brands values ('Fiat');
+insert into Brands values ('Ford');
+insert into Brands values ('Honda');
+insert into Brands values ('Hyundai');
+insert into Brands values ('Jaguar');
+insert into Brands values ('Jeep');
+insert into Brands values ('Kia');
+insert into Brands values ('Lamborghini');
+insert into Brands values ('Land Rover');
+insert into Brands values ('Maserati');
+insert into Brands values ('Mazda');
+insert into Brands values ('McLaren');
+insert into Brands values ('Mercedes-Benz');
+insert into Brands values ('Opel');
+insert into Brands values ('Peugeot');
+insert into Brands values ('Porsche');
+insert into Brands values ('Renault');
+insert into Brands values ('Rolls Royce');
+insert into Brands values ('Seat');
+insert into Brands values ('Skoda');
+insert into Brands values ('Subaru');
+insert into Brands values ('Suzuki');
+insert into Brands values ('Tofaş');
+insert into Brands values ('Toyota');
+insert into Brands values ('Volkswagen');
+insert into Brands values ('Volvo');
+ 
+
+
+
+
+
+
+
+
+
+
