@@ -4,6 +4,7 @@ using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,11 @@ namespace Business.Concrete
         public IDataResult<List<Car>> GetByUnitPrice(decimal minPrice, decimal maxPrice)
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.DailyPrice >= minPrice && p.DailyPrice <= maxPrice));
+        }
+
+        public IDataResult<List<CarDetailDTO>> GetCarDetail()
+        {
+            return new SuccessDataResult<List<CarDetailDTO>>(_carDal.GetCarDetail(),Messages.CarListed);
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int brandId)

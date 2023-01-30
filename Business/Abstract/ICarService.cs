@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Result;
 using Entities;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,6 @@ namespace Business.Abstract
 
         IDataResult<List<Car>> GetCarsByBrandId(int brandId);
         IDataResult<List<Car>> GetCarsByColorId(int colorId);
+        IDataResult<List<CarDetailDTO>> GetCarDetail();
     }
 }
