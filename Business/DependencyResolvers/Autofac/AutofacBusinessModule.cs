@@ -16,8 +16,18 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
+            #region Service Mapping
             builder.RegisterType<CarService>().As<ICarService>().SingleInstance();
+            builder.RegisterType<BrandService>().As<IBrandService>().SingleInstance();
+            builder.RegisterType<ColorService>().As<IColorService>().SingleInstance();
+            #endregion
+
+            #region Dal Mapping
             builder.RegisterType<EfCarDal>().As<ICarDal>().SingleInstance();
+            builder.RegisterType<EfBrandDal>().As<IBrandDal>().SingleInstance();
+            builder.RegisterType<EfColordal>().As<IColorDal>().SingleInstance();
+            #endregion
+
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
