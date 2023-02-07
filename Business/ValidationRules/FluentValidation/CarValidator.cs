@@ -16,8 +16,10 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(p => p.CarName).NotEmpty();
             RuleFor(p => p.DailyPrice).GreaterThan(0);
             RuleFor(p => p.DailyPrice).NotEmpty();
+           
             //RuleFor(p => p.CarName).Must(StartWithA).WithMessage("A Harfi ile başlamalıdır.");
         }
+
         //private bool StartWithA(string arg)
         //{
         //    return arg.StartsWith("A");
